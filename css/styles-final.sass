@@ -1,0 +1,44 @@
+$color-one: #FFF
+$color-two: #E65C43
+$color-three: #666
+$background-one: #F25C43
+$background-two: #F5F6F6
+$background-three: #30353D
+$full-width: 940px
+$half-width: 460px
+$header-height: 190px
+
+body
+	font-family: 'Roboto', sans-serif
+	font-size: 1em
+	line-height: 2em
+	background: url('../images/bg.gif') $color-one repeat-x
+
+main
+	width: $full-width
+	margin: 0 auto
+	padding: 0 10px
+
+@import nav
+
+@mixin custom-header($color, $weight, $size)
+	color: $color
+	font-weight: $weight
+	font-size: $size
+
+@mixin custom-header-height-zero($color, $weight, $size)
+	@include custom-header($color, $weight, $size)
+	line-height: 0
+
+@import header
+
+@import content
+    
+.greybar
+	width: 100%
+	height: 90px
+	background: $background-two
+	clear: both
+	padding-top: 30px
+
+@import footer
